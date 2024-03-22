@@ -45,11 +45,30 @@ export const AllocatedSlice = createSlice({
 
       // console.log(newAllocated);
     },
+    decreaseAmount: (
+      state: AllocatedArrayType,
+      action: PayloadAction<string>
+    ) => {
+      return state.map((element) => {
+        if (element.id === action.payload) {
+          return {
+            ...element,
+            amountForDepartment: element.amountForDepartment - 10,
+          };
+          //return element;
+        } else {
+          return element;
+        }
+      });
+
+      // console.log(newAllocated);
+    },
   },
 });
 
 export default AllocatedSlice.reducer;
-export const { allocate, deleteItem, increaseAmount } = AllocatedSlice.actions;
+export const { allocate, deleteItem, increaseAmount, decreaseAmount } =
+  AllocatedSlice.actions;
 export type AllocatedSliceType = ReturnType<
   typeof AllocatedSlice.getInitialState
 >;
