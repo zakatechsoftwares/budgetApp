@@ -73,7 +73,7 @@ function App() {
         <p className="display-5 fw-normal">Company's Budget Allocation</p>
         <Col
           lg={3}
-          className="d-flex justify-content-center align-item-center "
+          className="d-flex justify-content-center align-item-center mb-1 mb-lg-0 "
         >
           <Form.Group
             as={Row}
@@ -114,7 +114,7 @@ function App() {
             </Col>
           </Form.Group>
         </Col>
-        <Col lg={3}>
+        <Col lg={3} className="mb-1 mb-lg-0">
           <Form.Control
             plaintext
             readOnly
@@ -125,7 +125,7 @@ function App() {
             }`}
           />
         </Col>
-        <Col lg={3}>
+        <Col lg={3} className="mb-1 mb-lg-0">
           <Form.Control
             plaintext
             readOnly
